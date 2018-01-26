@@ -28,10 +28,19 @@ namespace BangazonDepartment
                 FacebookAdCampaignsSold = 12
             };
 
+            var it = new IT
+            {
+                Name = "IT/Development",
+                Supervisor = "Ringo",
+                Employee_Count = 16,
+                Skillz = "C#"
+            };
+
             var Departments = new List<Department>
             {
                 sales,
-                marketing
+                marketing,
+                it
             };
 
             foreach (var department in Departments)
@@ -46,6 +55,9 @@ namespace BangazonDepartment
                         break;
                     case Marketing m:
                         m.FacebookAdCampaigns();
+                        break;
+                    case IT m:
+                        m.Developers();
                         break;
                 }
             }
