@@ -17,7 +17,8 @@ namespace BangazonDepartment
                 Name = "Sales",
                 Supervisor = "Mark",
                 Employee_Count = 24,
-                SalesCompleted = 0
+                SalesCompleted = 0,
+                MeetingPlace = "Starbucks"
             };
 
             var marketing = new Marketing
@@ -25,7 +26,8 @@ namespace BangazonDepartment
                 Name = "Marketing",
                 Supervisor = "Jennifer",
                 Employee_Count = 10,
-                FacebookAdCampaignsSold = 12
+                FacebookAdCampaignsSold = 12,
+                MeetingPlace = "Panera Bread"
             };
 
             var it = new IT
@@ -33,7 +35,8 @@ namespace BangazonDepartment
                 Name = "IT/Development",
                 Supervisor = "Ringo",
                 Employee_Count = 16,
-                Skillz = "C#"
+                Skillz = "C#",
+                MeetingPlace = "Think Tank #1"
             };
 
             var Departments = new List<Department>
@@ -46,6 +49,7 @@ namespace BangazonDepartment
             foreach (var department in Departments)
             {
                 department.Department_Description();
+                department.SetMeetingPlace();
                 department.SetBudget(55000);
 
                 switch (department)

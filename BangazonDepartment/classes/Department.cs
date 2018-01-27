@@ -13,6 +13,7 @@ namespace BangazonDepartment.classes
         public string Supervisor { get; set; }
         public double Budget { get; set; }
         public int Employee_Count { get; set; }
+        public string MeetingPlace { get; set; }
 
         public virtual void Department_Description()
         {
@@ -23,6 +24,11 @@ namespace BangazonDepartment.classes
         {
             Budget = budget;
             Console.WriteLine($"{Budget} is the budget for this department");
+        }
+
+        public virtual void SetMeetingPlace()
+        {
+            Console.WriteLine($"The {Name} department meets at {MeetingPlace}");
         }
 
     }
