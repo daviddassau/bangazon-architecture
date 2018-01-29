@@ -39,7 +39,7 @@ namespace BangazonDepartment
                 MeetingPlace = "Think Tank #1"
             };
 
-            var Departments = new List<Department>
+            var Departments = new List<IShift>
             {
                 sales,
                 marketing,
@@ -48,20 +48,75 @@ namespace BangazonDepartment
 
             foreach (var department in Departments)
             {
-                department.Department_Description();
-                department.SetMeetingPlace();
-                department.SetBudget(55000);
+                //if (department is Marketing depMarketing)
+                //{
+                //    depMarketing.Department_Description();
+                //}
+                //if (department is Sales depSales)
+                //{
+                //    depSales.Department_Description();
+                //}
+                //if (department is IT depIT)
+                //{
+                //    depIT.Department_Description();
+                //}
+
+                //if (department is Marketing marketingMeetingPlace)
+                //{
+                //    marketingMeetingPlace.SetMeetingPlace();
+                //}
+                //if (department is Sales salesMeetingPlace)
+                //{
+                //    salesMeetingPlace.SetMeetingPlace();
+                //}
+                //if (department is IT itMeetingPlace)
+                //{
+                //    itMeetingPlace.SetMeetingPlace();
+                //}
+
+                //if (department is Marketing marketingBudget)
+                //{
+                //    marketingBudget.SetBudget(55000);
+                //}
+                //if (department is Sales salesBudget)
+                //{
+                //    salesBudget.SetBudget(55000);
+                //}
+                //if (department is IT itBudget)
+                //{
+                //    itBudget.SetBudget(55000);
+                //}
+
+
+                //department.Salary("string");
+                //department.Hourly("string");
+                //department.Commission("string");
+
 
                 switch (department)
                 {
                     case Sales s:
                         s.SalesGoals();
+                        s.Department_Description();
+                        s.SetMeetingPlace();
+                        s.SetBudget(55000);
+                        s.Commission("string");
                         break;
                     case Marketing m:
                         m.FacebookAdCampaigns();
+                        m.Department_Description();
+                        m.SetMeetingPlace();
+                        m.SetBudget(55000);
+                        m.Hourly("string");
                         break;
-                    case IT m:
-                        m.Developers();
+                    case IT i:
+                        i.Developers();
+                        i.Department_Description();
+                        i.SetMeetingPlace();
+                        i.SetBudget(55000);
+                        i.Salary("string");
+                        break;
+                    default:
                         break;
                 }
             }

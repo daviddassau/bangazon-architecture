@@ -6,8 +6,26 @@ using System.Threading.Tasks;
 
 namespace BangazonDepartment.classes
 {
-    class Marketing : Department
+    class Marketing : Department, IShift
     {
+
+        public string SalaryHourlyCommission { get; set; }
+
+        public void Commission(string commission)
+        {
+            Console.WriteLine($"The {Name} department doesn't get paid by commission");
+        }
+
+        public void Hourly(string hourly)
+        {
+            Console.WriteLine($"The {Name} department gets paid hourly");
+        }
+
+        public void Salary(string salary)
+        {
+            Console.WriteLine($"The {Name} department doesn't get paid by salary");
+        }
+
 
         public int FacebookAdCampaignsSold { get; set; }
 
