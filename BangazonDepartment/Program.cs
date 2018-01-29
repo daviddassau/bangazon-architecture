@@ -39,7 +39,7 @@ namespace BangazonDepartment
                 MeetingPlace = "Think Tank #1"
             };
 
-            var Departments = new List<Department>
+            var Departments = new List<IShift>
             {
                 sales,
                 marketing,
@@ -48,20 +48,31 @@ namespace BangazonDepartment
 
             foreach (var department in Departments)
             {
-                department.Department_Description();
-                department.SetMeetingPlace();
-                department.SetBudget(55000);
 
                 switch (department)
                 {
                     case Sales s:
+                        s.Department_Description();
                         s.SalesGoals();
+                        s.SetMeetingPlace();
+                        s.SetBudget(55000);
+                        s.Commission("commission");
                         break;
                     case Marketing m:
+                        m.Department_Description();
                         m.FacebookAdCampaigns();
+                        m.SetMeetingPlace();
+                        m.SetBudget(55000);
+                        m.Hourly("hourly");
                         break;
-                    case IT m:
-                        m.Developers();
+                    case IT i:
+                        i.Department_Description();
+                        i.Developers();
+                        i.SetMeetingPlace();
+                        i.SetBudget(55000);
+                        i.Salary("salary");
+                        break;
+                    default:
                         break;
                 }
             }
