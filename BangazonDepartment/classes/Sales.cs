@@ -13,7 +13,7 @@ namespace BangazonDepartment.classes
 
         public void Commission(string commission)
         {
-            Console.WriteLine($"The {Name} department gets paid by commission");
+            Console.WriteLine($"The {Name} department gets paid by {commission}");
         }
 
         public void Hourly(string hourly)

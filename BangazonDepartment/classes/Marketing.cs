@@ -18,7 +18,7 @@ namespace BangazonDepartment.classes
 
         public void Hourly(string hourly)
         {
-            Console.WriteLine($"The {Name} department gets paid hourly");
+            Console.WriteLine($"The {Name} department gets paid {hourly}");
         }
 
         public void Salary(string salary)

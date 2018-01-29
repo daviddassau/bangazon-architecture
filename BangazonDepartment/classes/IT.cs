@@ -23,7 +23,7 @@ namespace BangazonDepartment.classes
 
         public void Salary(string salary)
         {
-            Console.WriteLine($"The {Name} department gets paid salary");
+            Console.WriteLine($"The {Name} department gets paid {salary}");
         }
 
 
