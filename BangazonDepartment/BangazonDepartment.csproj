@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="classes\Department.cs" />
+    <Compile Include="classes\Employee.cs" />
     <Compile Include="classes\IShift.cs" />
     <Compile Include="classes\IT.cs" />
     <Compile Include="classes\Marketing.cs" />

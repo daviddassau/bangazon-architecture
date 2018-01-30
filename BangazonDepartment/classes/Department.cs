@@ -9,6 +9,9 @@ namespace BangazonDepartment.classes
     class Department
     {
 
+        List<Employee> _employees = new List<Employee>();
+        public List<Employee> Employees { get => _employees; }
+
         public string Name { get; set; }
         public string Supervisor { get; set; }
         public double Budget { get; set; }
@@ -29,6 +32,17 @@ namespace BangazonDepartment.classes
         public virtual void SetMeetingPlace()
         {
             Console.WriteLine($"The {Name} department meets at {MeetingPlace}");
+        }
+
+
+        public void AddEmployee(Employee employee)
+        {
+            _employees.Add(employee);
+        }
+
+        public void RemoveEmployee(Employee employee)
+        {
+            _employees.Remove(employee);
         }
 
     }
