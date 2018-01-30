@@ -39,12 +39,25 @@ namespace BangazonDepartment
                 MeetingPlace = "Think Tank #1"
             };
 
-            var Departments = new List<IShift>
+            var Departments = new List<Department>
             {
                 sales,
                 marketing,
                 it
             };
+
+            sales.AddEmployee(new Employee { FirstName = "John", LastName = "Bonham" });
+            sales.AddEmployee(new Employee { FirstName = "Robert", LastName = "Plant" });
+            sales.AddEmployee(new Employee { FirstName = "Jimmy", LastName = "Page" });
+            marketing.AddEmployee(new Employee { FirstName = "Jordan", LastName = "Pudnick" });
+            marketing.AddEmployee(new Employee { FirstName = "Chad", LastName = "Gilbert" });
+            marketing.AddEmployee(new Employee { FirstName = "Ian", LastName = "Grushka" });
+            it.AddEmployee(new Employee { FirstName = "Paul", LastName = "McCartney" });
+            it.AddEmployee(new Employee { FirstName = "John", LastName = "Lenon" });
+            it.AddEmployee(new Employee { FirstName = "George", LastName = "Harrison" });
+
+            
+
 
             foreach (var department in Departments)
             {
@@ -76,6 +89,20 @@ namespace BangazonDepartment
                         break;
                 }
             }
+
+
+            foreach (var department in Departments)
+            {
+                Console.WriteLine($"Department: {department.Name}");
+                foreach (var employee in department.Employees)
+                {
+                    Console.WriteLine($"{employee.FirstName} {employee.LastName}");
+                }
+            }
+
+
+
+
 
             Console.ReadLine();
 
